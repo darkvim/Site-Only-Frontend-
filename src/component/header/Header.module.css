@@ -1,0 +1,92 @@
+.header {
+	background-color: rgba(42, 42, 42, 0.95);
+	padding: 20px 0;
+	width: 100%;
+	display: flex;
+	color: #fff;
+	height: 40vh;
+	width: 100%;
+	background-image: url('wallpaper/wallpaper5.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.header ul {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+
+#search_box {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: auto;
+	border-radius: 16px;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	background-color: #282c34;
+	width: 60%;
+	padding: 4px 4px 4px 16px;
+}
+
+#search_box > img {
+	width: 30px;
+	height: 30px;
+	margin: 4px;
+	border-top-right-radius: 16px;
+	border-bottom-right-radius: 16px;
+	cursor: pointer;
+	position: relative;
+	filter: invert(1) grayscale(1) contrast(100%) brightness(100);
+}
+
+.header input[type='search'] {
+	display: flex;
+	text-transform: capitalize;
+	width: 100%;
+	height: 100%;
+	color: white;
+	font-size: clamp(1rem, 1vw, 2rem);
+}
+
+.header li {
+	margin: 0 15px;
+	font-size: 18px;
+}
+
+.header a {
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+	transition: color 0.3s;
+	position: relative;
+}
+
+.active::before {
+	content: '';
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: rgb(255, 0, 255);
+}
+
+.header a:hover {
+	color: rgb(255, 0, 255);
+}
+
+.header li:first-child {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.header li:nth-child(2) {
+	flex-grow: 1;
+	text-align: center;
+	font-style: italic;
+	color: #bbb;
+}

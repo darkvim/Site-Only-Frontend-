@@ -1,0 +1,16 @@
+.redirectButtonMessageContainer {
+	background-color: rgb(255, 82, 82);
+	color: white;
+	font-weight: 500;
+	font-size: clamp(0.5rem, 0.8vw, 1rem);
+	border-radius: 16px;
+	z-index: 999;
+	padding: 6px;
+	position: fixed;
+	width: max-content;
+	text-align: center;
+	letter-spacing: 1px;
+	bottom: 1%;
+	left: 35%;
+	right: 50%;
+}

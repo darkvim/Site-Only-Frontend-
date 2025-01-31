@@ -1,0 +1,10 @@
+.accountMainContainer {
+	background-color: rgb(15, 15, 15);
+	width: 100%;
+	min-height: 100vh;
+	height: 100%;
+}
+
+.accountMainContainer * {
+	color: white;
+}

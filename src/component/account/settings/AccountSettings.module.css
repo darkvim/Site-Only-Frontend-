@@ -1,0 +1,111 @@
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+	z-index: 998;
+}
+
+:root {
+	--background-color: #121212;
+	--primary-color: rgb(255, 0, 255);
+	--input-bg-color: #333;
+	--input-border-color: #444;
+	--input-placeholder-color: #bbb;
+	--input-focus-border-color: var(--primary-color);
+	--input-focus-bg-color: #444;
+	--label-color: var(--primary-color);
+}
+
+.accountSettingsContainer {
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	flex-direction: column;
+	position: fixed;
+	z-index: 999;
+	top: 50%;
+	left: 50%;
+	right: 50%;
+	gap: 20px;
+	transform: translate(-50%, -50%);
+	margin: auto;
+	width: max-content;
+	max-width: 600px;
+	background-color: var(--background-color);
+	border-radius: 8px;
+	color: white;
+	padding: 2rem;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.accountSettingsContainer form {
+	position: relative;
+}
+
+.accountSettingsContainer h2 {
+	text-align: center;
+	margin-bottom: 20px;
+	color: var(--primary-color);
+}
+
+.accountSettingsContainer input {
+	width: 100%;
+	padding: 8px;
+	margin: 16px auto;
+	background-color: var(--input-bg-color);
+	border: 1px solid var(--input-border-color);
+	border-radius: 4px;
+	color: white;
+	font-size: clamp(0.8rem, 1vw, 1.4rem);
+}
+
+.accountSettingsContainer input:focus {
+	outline: none;
+	border-color: var(--input-focus-border-color);
+	background-color: var(--input-focus-bg-color);
+}
+
+.accountSettingsContainer input::placeholder {
+	color: var(--input-placeholder-color);
+}
+
+.accountSettingsContainer label {
+	border: 1px dashed rgb(255, 0, 255);
+	border-radius: 16px;
+	padding: 8px;
+	bottom: 10px;
+	width: max-content;
+	transition: 0.15s ease-in-out;
+	margin-right: 24px;
+}
+
+.accountSettingsContainer label:hover {
+	border: 1px solid rgb(255, 0, 255);
+	background-color: rgb(255, 0, 255);
+	cursor: pointer;
+}
+
+.accountSettingsContainer input[type='file'] {
+	display: none;
+}
+
+.accountSettingsContainer button {
+	padding: 8px;
+	font-size: clamp(0.9rem, 0.9vw, 1.3rem);
+	color: white;
+	background-color: black;
+	border-radius: 24px;
+	border: 2px solid rgb(255, 0, 255);
+	font-weight: bold;
+	height: max-content;
+	width: max-content;
+	transition: 0.15s ease-in-out;
+}
+
+.accountSettingsContainer button:hover {
+	background-color: rgb(255, 0, 255);
+	cursor: pointer;
+}

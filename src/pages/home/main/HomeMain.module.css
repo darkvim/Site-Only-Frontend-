@@ -1,0 +1,22 @@
+.home_main_container {
+	width: 90%;
+	height: 100%;
+	margin-left: auto;
+	overflow: hidden;
+}
+
+.home_main_container > header {
+	width: 95%;
+	display: flex;
+	gap: 24px;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-bottom: 72px;
+	margin-top: 10px;
+	padding: 8px;
+	box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1),
+		-1px -1px 1px rgba(0, 0, 0, 0.1);
+	border-radius: 8px;
+	background-color: white;
+}

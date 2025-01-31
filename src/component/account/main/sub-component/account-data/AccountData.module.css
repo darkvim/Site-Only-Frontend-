@@ -1,0 +1,61 @@
+.user_data {
+	display: flex;
+	padding: 40px;
+	height: 10vh;
+	background-color: black;
+	position: relative;
+}
+
+.user_data > * {
+	user-select: none;
+}
+
+.user_data > img {
+	position: absolute;
+	top: -120px;
+	left: 50px;
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+	border: 5px solid black;
+}
+
+.user_data > img:hover {
+	opacity: 0.7;
+	cursor: pointer;
+}
+
+.user_data > div:nth-child(3) {
+	position: absolute;
+	left: 275px;
+	top: 15px;
+}
+
+.account_button {
+	position: absolute;
+	padding: 8px 16px;
+	font-size: clamp(1rem, 1vw, 1.5rem);
+	color: white;
+	background-color: black;
+	border-radius: 24px;
+	border: 2px solid rgb(255, 0, 255);
+	font-weight: bold;
+	height: max-content;
+	width: max-content;
+	transition: 0.15s ease-in-out;
+}
+
+.exitButton {
+	right: 100px;
+	top: 20px;
+}
+
+.settingsButton {
+	left: 500px;
+	top: 20px;
+}
+
+.account_button:hover {
+	background-color: rgb(255, 0, 255);
+	cursor: pointer;
+}

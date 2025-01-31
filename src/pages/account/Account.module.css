@@ -1,0 +1,9 @@
+.accountContainer {
+	color: white;
+	height: 100%;
+	min-height: 100vh;
+}
+
+.accountContainer > * {
+	color: black !important;
+}

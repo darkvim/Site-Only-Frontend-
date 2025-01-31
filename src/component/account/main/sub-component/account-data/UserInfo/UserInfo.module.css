@@ -1,0 +1,34 @@
+.user_info > p {
+	font-weight: 300;
+	cursor: pointer;
+	height: max-content;
+	width: max-content;
+	font-size: clamp(12px, 0.8vw, 1rem);
+}
+
+.user_info > h3 {
+	font-size: clamp(1rem, 1.4vw, 2.2rem);
+	text-transform: capitalize;
+	letter-spacing: 1px;
+	cursor: pointer;
+	height: max-content;
+	width: max-content;
+	font-weight: 500;
+}
+
+.user_info > *:hover {
+	color: rgb(255, 0, 255);
+}
+
+.copyMessage {
+	position: absolute;
+	top: 55px;
+	left: 50%;
+	font-weight: 500;
+	transform: translateX(-50%);
+	background-color: rgb(255, 0, 255);
+	color: white;
+	padding: 5px 10px;
+	border-radius: 16px;
+	font-size: clamp(0.8rem, 1.1vw, 1.2rem);
+}

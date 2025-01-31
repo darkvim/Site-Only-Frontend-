@@ -1,0 +1,44 @@
+.post_data_icons {
+	margin: auto;
+	width: 80%;
+}
+
+.post_data_icons > div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 8px;
+	width: max-content;
+}
+
+img {
+	width: 300px;
+	height: 200px;
+}
+
+#create_post_link {
+	position: absolute;
+	left: 50%;
+	top: 200px;
+}
+
+#create_post_link > h1 {
+	color: rgb(255, 0, 255);
+	font-weight: bold;
+	letter-spacing: 1px;
+	cursor: pointer;
+}
+
+#create_post_link > h1::before {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 1px;
+	bottom: 0;
+	transition: 0.15s ease-in;
+	background-color: rgb(255, 0, 255);
+}
+
+#create_post_link > h1:hover::before {
+	width: 100%;
+}

@@ -1,0 +1,63 @@
+/* Authenticate.module.css */
+
+.authenticateContainer {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ height: 100vh;
+ background-color: #f4f4f9;
+}
+
+.authenticateForm {
+ background-color: #fff;
+ padding: 20px;
+ border-radius: 8px;
+ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+ width: 100%;
+ max-width: 400px;
+}
+
+.authenticateForm h2 {
+ text-align: center;
+ font-size: 24px;
+ color: #333;
+ margin-bottom: 20px;
+}
+
+.authenticateForm input {
+ width: 100%;
+ padding: 12px;
+ margin: 10px 0;
+ border: 1px solid #ddd;
+ border-radius: 4px;
+ font-size: 16px;
+ box-sizing: border-box;
+}
+
+.authenticateForm input[type="text"],
+.authenticateForm input[type="password"] {
+ height: 40px;
+}
+
+.authenticateForm button {
+ width: 100%;
+ padding: 12px;
+ background-color: #007bff;
+ color: white;
+ border: none;
+ border-radius: 4px;
+ font-size: 16px;
+ cursor: pointer;
+ transition: background-color 0.3s;
+}
+
+.authenticateForm button:hover {
+ background-color: #0056b3;
+}
+
+.authenticateForm p {
+ text-align: center;
+ color: #555;
+ font-size: 14px;
+ margin-top: 10px;
+}
