@@ -1,7 +1,7 @@
-import { useNavigate } from 'react-router-dom'
-import { navElements, websiteLogo } from '../../links/nav_menu'
-import styles from './Nav.module.css'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { navElements } from '../../links/nav_menu'
+import styles from './Nav.module.css'
 
 export function Nav() {
 	const navigate = useNavigate()
@@ -10,12 +10,12 @@ export function Nav() {
 	return (
 		<nav className={styles.home_nav}>
 			<ul>
-				<li onClick={() => navigate('/')}>{websiteLogo.value}</li>
 				{navElements.map((value, key) => {
 					return (
 						<li
 							onMouseEnter={() => setHoveredIndex(key)}
 							onMouseLeave={() => setHoveredIndex(null)}
+							onClick={() => navigate(value.value)}
 							key={key}
 						>
 							<img src={value.img} alt='image' />
