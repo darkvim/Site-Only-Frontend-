@@ -7,6 +7,7 @@ import styles from './Header.module.css'
 import { useEffect, useState } from 'react'
 import { axiosCurrentUser } from '../../axios/account/axiosAccountInfo'
 import { IUserData } from '../../types/account/IUserData'
+import { SearchSuggestions } from '../search_suggestions/SearchSuggestions'
 
 export function Header() {
 	const location = useLocation()
@@ -35,9 +36,9 @@ export function Header() {
 					className={styles.search_box}
 				>
 					<input type='search' placeholder={headerElements[0]} />
-					<img src={search} alt='search icon' />
+					<img id={styles.search_icon} src={search} alt='search icon' />
 
-					{showSuggestions && <h1>SUGGESTIONS</h1>}
+					{showSuggestions && <SearchSuggestions />}
 				</div>
 				<div className={styles.header_right_part}>
 					<div>
