@@ -1,1 +1,1 @@
-export const headerElements = ["LOGO", "SEARCH", "Home", "Account"];
+export const headerElements = ['Search', 'Home', 'Account']

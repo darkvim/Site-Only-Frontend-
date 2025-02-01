@@ -1,29 +1,32 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import { navElements } from '../../links/nav_menu'
 import styles from './Nav.module.css'
 
 export function Nav() {
-	const navigate = useNavigate()
+	const location = useLocation()
 	const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
 	return (
 		<nav className={styles.home_nav}>
-			<ul>
-				{navElements.map((value, key) => {
-					return (
-						<li
-							onMouseEnter={() => setHoveredIndex(key)}
-							onMouseLeave={() => setHoveredIndex(null)}
-							onClick={() => navigate(value.value)}
-							key={key}
-						>
-							<img src={value.img} alt='image' />
-							{hoveredIndex === key && <span>{value.value}</span>}
-						</li>
-					)
-				})}
-			</ul>
+			{navElements.map((value, key) => {
+				return (
+					<NavLink
+						onMouseEnter={() => setHoveredIndex(key)}
+						onMouseLeave={() => setHoveredIndex(null)}
+						to={`/${value.value}`}
+						className={({ isActive }) => (isActive ? styles.active : '')}
+						end
+						onClick={e => {
+							if (location.pathname === `/${value.value}`) e.preventDefault()
+						}}
+						key={key}
+					>
+						<img src={value.img} alt='image' />
+						{hoveredIndex === key && <span> {value.alt}</span>}
+					</NavLink>
+				)
+			})}
 		</nav>
 	)
 }
